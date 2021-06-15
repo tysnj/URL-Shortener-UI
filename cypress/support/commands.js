@@ -1,6 +1,4 @@
-
-
-Cypress.Commands.add('stubData', () => {
+Cypress.Commands.add('stubGet', () => {
   const baseUrl = 'http://localhost:3001/api/v1'
   cy.fixture('urlData.json')
     .then(data => {
