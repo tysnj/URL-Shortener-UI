@@ -5,7 +5,7 @@ describe('App', () => {
   })
 
   it('Should do something', () => {
-    expect(true).toBe(true);
+    expect(true).to.equal(true);
   })
 
   it('Should render a title', () => {
