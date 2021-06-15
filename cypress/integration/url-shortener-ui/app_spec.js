@@ -4,11 +4,7 @@ describe('App', () => {
     cy.visit('/')
   })
 
-  it('Should do something', () => {
-    expect(true).to.equal(true);
-  })
-
-  it('Should render a title', () => {
+  it('Should render the title', () => {
     cy.get('h1').contains('URL Shortener')
   })
 
@@ -19,7 +15,15 @@ describe('App', () => {
   })
 
   it('Should render a form with proper inputs', () => {
-    cy.get('form').get('[name="title"]').should('be.visible')
-    cy.get('form').get('[name="urlToShorten"]').should('be.visible')
+    cy.get('form').get('[name="title"]')
+      .should('be.visible')
+    cy.get('form').get('[name="urlToShorten"]')
+      .should('be.visible')
+  })
+
+  it('Should render a button for the form', () => {
+    cy.get('button')
+      .contains('Shorten Please!')
+      .should('be.visible')
   })
 })
