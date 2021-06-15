@@ -23,7 +23,7 @@ export class App extends Component {
       <main className="App">
         <header>
           <h1>URL Shortener</h1>
-          <UrlForm />
+          <UrlForm urls={this.state.urls}/>
         </header>
         <UrlContainer urls={this.state.urls}/>
       </main>
