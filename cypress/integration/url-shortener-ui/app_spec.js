@@ -22,8 +22,4 @@ describe('App', () => {
     cy.get('form').get('[name="title"]').should('be.visible')
     cy.get('form').get('[name="urlToShorten"]').should('be.visible')
   })
-
-  it('Should render the background image', () => {
-
-  })
 })
