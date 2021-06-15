@@ -16,7 +16,7 @@ class UrlForm extends Component {
 
   postSubmission = data => {
     postURL(data)
-      .then(data => console.log(data))
+      .then(data => this.props.addUrl(data))
       .catch(error => console.log(error))
   }
 
