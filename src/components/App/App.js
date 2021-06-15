@@ -13,6 +13,9 @@ export class App extends Component {
   }
 
   componentDidMount() {
+    getUrls()
+      .then(data => this.setState({urls: data.urls}))
+      .catch(error => console.log(error.message))
   }
 
   render() {
@@ -22,7 +25,6 @@ export class App extends Component {
           <h1>URL Shortener</h1>
           <UrlForm />
         </header>
-
         <UrlContainer urls={this.state.urls}/>
       </main>
     );
