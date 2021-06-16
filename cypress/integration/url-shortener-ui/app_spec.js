@@ -10,7 +10,7 @@ describe('App', () => {
 
   it('Should render existing shortened URLs', () => {
     cy.get('section').within(() => {
-      cy.get('.url').should('have.length', 4);
+      cy.get('.url').should('have.length', 2);
     })
   })
 

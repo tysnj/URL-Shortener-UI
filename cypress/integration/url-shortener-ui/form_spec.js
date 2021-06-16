@@ -18,9 +18,11 @@ describe('Form', () => {
   })
 
   it('Should render the submitted url', () => {  
+    cy.stubPost()
     cy.fillForm()
     cy.get('button').click()
-    cy.get('section').children('.url').should('have.length', 5);    
+    cy.get('section').children('.url').should('have.length', 3);    
+    cy.get('#3').contains('Awesomer photo');    
   })
 
 })
